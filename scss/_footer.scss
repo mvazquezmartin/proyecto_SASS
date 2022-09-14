@@ -1,0 +1,24 @@
+footer{	
+	@include flex-container(column, center);
+	background: radial-gradient(ellipse at center, rgba(19,25,96,1) 0%,rgba(125,185,232,0) 100%);
+	align-items: center;	
+	width: 100%;
+	text-align: center;
+	padding: 30px 0 15px;
+	color: #a8a8a8;
+		h4{
+			margin-bottom: 5px;			
+			font-weight: 600;							
+		}
+		p{
+
+		}
+		.iconos{					
+			display: flex;
+			justify-content: center;
+				.bi{
+					margin: 0rem 0.5rem;
+					color: #ad6661;
+				}
+		}
+}

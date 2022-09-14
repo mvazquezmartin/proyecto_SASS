@@ -13,7 +13,7 @@
 	<link rel="stylesheet" href="../css/estilo.css">
 	<title>Servicios - Aplicando SASS</title>
 </head>
-<body>
+<body class="bgBody">
 	<header>
 		<nav>
 			<img src="../assets/logo.png" alt="">
@@ -23,8 +23,8 @@
 					<li><a href="../index.html">INICIO</a></li>
 					<li><a href="servicios.html">SERVICIOS</a></li>
 					<li><a href="curso.html">CURSO</a></li>
-					<li><a href="">MENU 4</a></li>
-					<li><a href="">MENU 5</a></li>
+					<li><a href="productos.html">PRODUCTOS</a></li>
+					<li><a href="nosotros.html">NOSOTROS</a></li>
 				</ul>
 			</div>
 			<i class="bi bi-list" onclick="showMenu()"></i>
@@ -32,24 +32,27 @@
 	</header>
 	<main>
 		<section class="servicios-main">
-			<h1>Servicio que ofrecemos</h1>
-			<p>Mas de 20 de años en el rubro detailing</p>
+			<h1>Servicios que ofrecemos</h1>
+			<p>Mas de 20 de años de trayectoria en detailing.</p>
 		</section>
-		<div class="row">
-			<div class="servicios-col">
+		<div class="flex-row-contenedor">
+			<div class="flex-item-card">
 				<h3>Abrillantado</h3>
 				<img src="../assets/auto01.jpg" alt="">
 				<p>Correccion del barnis, realsa el brillo y el color removiendo las rayas de lavado,</p>
 			</div>
-			<div class="servicios-col">
+			<div class="flex-item-card">
 				<h3>Tratamiento Acrilico</h3>
 				<img src="../assets/auto02.jpg" alt="">
 				<p>Consiste de una corrección mas profunda, donde se aplican los 3 pasos Koch Chemie, aplicanco Menzerna</p>
 			</div>
-			<div class="servicios-col">
+			<div class="flex-item-card">
 				<h3>Tratamiento Ceramico</h3>
 				<img src="../assets/auto03.jpg" alt="">
-				<p>Incluse descontaminado + chasis, correcion 3 pasos Koch Chemie y se protege con Gtech</p>
+				<p>Nuestro servicio de Tratamiento Cerámico va más allá de una simple aplicación de una protección. Nosotros llevamos la estética de tu vehículo a otro nivel.
+				Este servicio incluye la limpieza detallada de toda la unidad, el lavado de motor y descontaminación férrica de las llantas, en cualquiera de las opciones de este servicio que tenemos para ofrecerte.Como su nombre lo indica es una secuencia de procesos que incluye el lavado, descontaminado y el pulido que requiera la unidad dependiendo del estado para alcanzar nuestro estándar de entrega.
+				Por último la aplicación de un coating o sellador cerámico que en su mayoría está compuesto por silicio, cuarzo, titanio o flourcarbono, lo que transforma a la pintura en una superficie con propiedades antiadherentes, hidrofóbica y con una capacidad de resistencia química y abrasiones increíble.
+				El Tratamiento cerámico es la mejor opción para proteger la pintura de tu auto desde el primer día o devolverle la vida y dejarlo como 0km.</p>
 			</div>
 		</div>
 	</main>

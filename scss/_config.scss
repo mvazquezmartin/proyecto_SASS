@@ -1,0 +1,60 @@
+
+$shadow:0 0 20px 0px rgba(0,0,0,0.2);
+$gradient:linear-gradient(rgba(4,9,30,0.7), rgba(4,9,30,0.7));
+$primaryColor:#f44336;
+$mobile: 700px;
+
+/* MEDIA MOBILE*/
+@mixin mobile{
+	@media (max-width: $mobile){
+		@content
+	}
+}
+
+/* BOTON/HOVER */
+@mixin btn{	
+	text-decoration: none;
+	color: #fff;
+	border: 1px solid #fff;
+	padding: 1rem 2rem;
+	font-size: 0.85rem;
+	background: transparent;	
+	cursor: pointer;	
+		&:hover{
+			border: 1px solid $primaryColor;
+			background: $primaryColor;
+			transition: 1s;
+		}
+}
+
+/* FLEXBOX [CONTAINER(ITEM)] */
+@mixin flex-container($direction, $just-cont){
+	display: flex;
+	flex-direction: $direction;
+	flex-wrap: wrap;
+	justify-content: $just-cont;
+
+}
+
+@mixin flex-item{
+
+}
+
+/* FLEXBOX ITEMCARD]
+@mixin flex-row-contenedor($just-cont){
+	display: flex;	
+	flex-wrap: wrap;
+	justify-content: $just-cont;
+} */
+
+@mixin flex-item-card{
+	flex-basis:30%;
+	background: #CDCDCD;
+	border-radius: 10px;
+	margin-bottom: 5%;
+	padding: 15px 10px;
+	box-sizing: border-box;	
+	text-align: center;
+	transition: 0.5s;
+}
+

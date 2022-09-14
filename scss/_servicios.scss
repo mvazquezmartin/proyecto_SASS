@@ -1,0 +1,29 @@
+@import "config";
+
+/* Servicios */
+.servicios-main{
+	@include flex-container(column, center);
+	width: 80%;
+	margin: auto;
+	text-align: center;
+	color: #fff;
+	margin-bottom: 0.8rem;
+		h1{
+			font-size: 2rem;
+		}	
+}
+.flex-row-contenedor{
+	@include flex-container(row, space-between); 
+		.flex-item-card{
+			@include flex-item-card;
+		}
+}
+.servicios-col p{
+	color: #777;
+}
+
+@include mobile{
+	.flex-row-contenedor{
+		@include flex-container(column, center);		
+	}
+}

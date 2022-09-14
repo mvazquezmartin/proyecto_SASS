@@ -1,0 +1,60 @@
+@import "config";
+
+/* INDEX */
+.bgImg-header{
+	width: 100%;
+	min-height: 100vh;	
+	padding-bottom: 0px;
+	background-image: $gradient,url(../assets/background.jpg);
+	background-position: center;
+	background-size: cover;
+	position: relative;
+}
+
+/*.text-main{
+	width: 90%;
+	color: #fff;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	text-align: center;
+ 		h1{
+			font-size: 3rem;
+			p{
+				margin: 10px 0 40px;
+				font-size: 14px;
+				color:#fff;
+			}
+		}		
+	}
+}*/
+
+.flex-container-main{
+	@include flex-container(column, center);	
+	align-items: center;
+	overflow: visible;
+	min-height: 70vh;
+	width: 100%;
+		.box-main{
+			overflow: visible;
+			color: #fff;
+			text-align: center;						
+				h1{
+					font-size: 3rem;			
+				}
+				p{
+					font-size: 1rem;
+					margin: 10px 5px 40px;
+				}
+		}	
+}
+.boton-main{
+	@include btn;	
+}	
+nav{
+	.bi{
+		display: none;		
+	}	
+}
+

@@ -1,0 +1,37 @@
+@import "config";
+
+/* Curso */
+.btn-inscribirse{
+	@include btn;
+	color: #f44336;
+	&:hover{
+		color:#fff;		
+	}
+
+}
+.flex-container{
+	@include flex-container(row, center);	
+		.curso-item{		
+			display: flex;
+			max-width: 700px;
+			flex-direction: column;	
+			align-items: center;
+			background: #fff3f3;
+			border-radius: 10px;			
+			margin: 1% 1%;
+			padding: 15px 10px;
+			box-sizing: border-box;	
+			text-align: center;
+			transition: 0.5s;
+				img{
+					align-self: center;
+					height: auto;
+					max-width: 100%;
+				}
+		}
+
+}
+
+.curso-col ul, h3,{
+	margin-top: 2%;
+}
