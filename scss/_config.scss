@@ -3,15 +3,14 @@ $shadow:0 0 20px 0px rgba(0,0,0,0.2);
 $gradient:linear-gradient(rgba(4,9,30,0.7), rgba(4,9,30,0.7));
 $primaryColor:#f44336;
 $mobile: 700px;
-
-/* MEDIA MOBILE*/
+/*
+/* MEDIA MOBILE */
 @mixin mobile{
 	@media (max-width: $mobile){
 		@content
 	}
 }
-
-/* BOTON/HOVER */
+/* BOTON-HOVER */
 @mixin btn{	
 	text-decoration: none;
 	color: #fff;
