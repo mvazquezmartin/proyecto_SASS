@@ -1,28 +1,30 @@
 
 $shadow:0 0 20px 0px rgba(0,0,0,0.2);
-$gradient:linear-gradient(rgba(4,9,30,0.7), rgba(4,9,30,0.7));
+$gradient:linear-gradient(rgba(4,9,30,0.6), rgba(4,9,30,0.6));
 $primaryColor:#f44336;
 $mobile: 700px;
-/*
+
 /* MEDIA MOBILE */
 @mixin mobile{
 	@media (max-width: $mobile){
 		@content
 	}
 }
+
 /* BOTON-HOVER */
 @mixin btn{	
 	text-decoration: none;
+	text-align: center;
 	color: #fff;
 	border: 1px solid #fff;
 	padding: 1rem 2rem;
 	font-size: 0.85rem;
 	background: transparent;	
-	cursor: pointer;	
+	cursor: pointer;
+	transition: background 1s 0s ease, border 1s 0s ease;
 		&:hover{
 			border: 1px solid $primaryColor;
-			background: $primaryColor;
-			transition: 1s;
+			background: $primaryColor;			
 		}
 }
 
@@ -49,11 +51,29 @@ $mobile: 700px;
 @mixin flex-item-card{
 	flex-basis:30%;
 	background: #CDCDCD;
-	border-radius: 10px;
-	margin-bottom: 5%;
+	border-radius: 10px;	
 	padding: 15px 10px;
 	box-sizing: border-box;	
-	text-align: center;
-	transition: 0.5s;
+	text-align: center;	
 }
 
+/* BORDER FOOTER */
+.bd-lr{
+	border-right: 1px solid #808080;
+	border-left: 1px solid #808080;
+}
+/* BACKGROUND REPEAT */
+.bg-repeat{
+	background-image: url("../assets/bgRepeat.jpg");
+	background-repeat: repeat-x;
+}
+
+/* HOVER SHADOW */
+
+/*@mixin hover-shadow{
+
+	&:hover{
+		transition: box-shadow 0.5s 0s ease;
+		cursor: pointer;
+	}
+}*/

@@ -23,6 +23,7 @@
 	color: #777;
 }
 
+/* MOBILE */
 @include mobile{
 	.flex-row-contenedor{
 		@include flex-container(column, center);

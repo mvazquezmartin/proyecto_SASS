@@ -12,13 +12,15 @@
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,400;0,500;0,700;1,300;1,400&display=swap" rel="stylesheet">
+	<!-- AOS ANIMATION -->
+	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">	
 	<!-- CSS -->
 	<link rel="stylesheet" href="css/estilo.css">
 	<title>Inicio - Aplicando SASS</title>
 </head>
-<body>
-	<header class="bgImg-header">
-		<nav>
+<body>	
+	<header class="bgImg-home">
+		<nav>			
 			<img src="assets/logo.png" alt="logo nombreEmpresa">
 			<div id="navLinks" class="nav-links">
 				<i class="bi bi-x-circle" onclick="hideMenu()"></i>
@@ -29,27 +31,80 @@
 					<li><a href="pages/productos.html">PRODUCTOS</a></li>
 					<li><a href="pages/nosotros.html">NOSOTROS</a></li>
 				</ul>
-			</div>
+			</div>			
 			<i class="bi bi-list" onclick="showMenu()"></i>
 		</nav>		
-	<div class="flex-container-main">
-		<div class="box-main">
+	<div class="row rowMain">
+		<div class="box-main" data-aos="zoom-out" data-aos-duration="800">
 			<h1>Bienvenido a mi sitio web</h1>
 			<p>En este proyecto, voy a estar desarrollando el uso de SASS, Grid y Flexbox. La tematica de la pagina es de un taller detailing.</p>
 			<a href="pages/servicios.html" class="boton-main">Visitanos para saber mas!</a>			
 		</div>
 	</div>	
 	</header>
-	<footer>
-		<h4>Sobre Nosotros</h4>
-		<p>Visita nuestras redes sociales</p>
-		<div class="iconos">
-			<a href="https://www.facebook.com/" target="__blank"><i class="bi bi-facebook"></i></a>
-			<a href="https://www.instagram.com/" target="__blank"><i class="bi bi-instagram"></i></a>
-			<a href="https://www.google.com.ar/" target="__blank"><i class="bi bi-whatsapp"></i></a>
-			<a href="https://github.com/mvazquezmartin" target="__blank"><i class="bi bi-github"></i></a>
+	<div class="row bg-repeat" data-aos="zoom-out-up">		
+		<div class="item-column">
+			<h2>Encontrá acá las marcas de mayor prestigio internacional: Carpro, Chemical Guys, Mothers, Rupes, Scangrip, y más!</h2>
 		</div>
-	</footer>		
+		<div class="item-column">	
+			<img src="assets/bannerProductos.jpg" alt="detailing productos">
+		</div>		
+	</div>
+	<div class="row bgGradient">
+		<section class="servicios" data-aos="zoom-out-up">
+			<h1>Servicios que ofrecemos</h1>
+			<p>Mas de 20 de años de trayectoria en detailing.</p>
+		</section>		
+	</div>
+	<div class="row bgGradient">		
+		<div class="flex-item-card" data-aos="zoom-out-up">
+			<h3>Abrillantado</h3>
+			<img src="assets/auto01.jpg" alt="detailing abrillantado">
+			<p>La función principal del abrillantador es limpiar la pintura de imperfecciones, por medio de sus abrasivos suaves o controlados. Esto es lo que le brinda una apariencia brillante y pulida a tu coche.</p>
+		</div>
+		<div class="flex-item-card" data-aos="zoom-out-up">
+			<h3>Tratamiento Acrilico</h3>
+			<img src="assets/auto02.jpg" alt="detailing tratamiento acrilico">
+			<p>Es un proceso de descontaminacion de la pintura seguido por es un sistema de pulido, lustre, acabado (PRE encerado) y encerado y/o sellado. La cera es a base acrílica de ahí proviene el nombre de “tratamiento acrílico”.</p>
+		</div>
+		<div class="flex-item-card" data-aos="zoom-out-up">
+			<h3>Tratamiento Ceramico</h3>
+			<img src="assets/auto03.jpg" alt="detailing tratamiento ceramico">
+			<p>El coating cerámico es un revestimiento líquido que contiene moléculas de Dióxido de Silicio (SiO2), al cual se le suele llamar “vidrio líquido” dado que el dióxido de silicio es parte importante de la composición química del vidrio.</p>
+		</div>
+		<a href="pages/servicios.html" class="btn-info">Mas Info</a>	
+	</div>
+				
+	<footer>
+		<div class="footer" data-aos="zoom-out-up" data-aos-anchor-placement="center-bottom">
+			<div class="row">
+				<div class="icono-column">
+					<i class="bi bi-truck"></i>
+					<h4>ENVÍOS A TODO EL PAÍS</h4>
+					<h5>COMPRÁ SIN SALIR DE TU CASA</h5>
+				</div>
+				<div class="icono-column bd-lr">
+					<i class="bi bi-credit-card"></i>
+					<h4>HASTA 12 CUOTAS</h4> 
+					<h5>CON TODAS LAS TARJETAS</h5>
+				</div>		
+				<div class="icono-column">
+					<i class="bi bi-lock"></i>
+					<h4>COMPRA SEGURA</h4>
+					<h5>PROTEGEMOS TUS DATOS</h5>
+				</div>	
+			</div>		
+			<h5>Sobre Nosotros</h5>
+			<p>Visita nuestras redes sociales</p>
+			<div class="iconos">
+				<a href="https://www.facebook.com/" target="__blank"><i class="bi bi-facebook"></i></a>
+				<a href="https://www.instagram.com/" target="__blank"><i class="bi bi-instagram"></i></a>
+				<a href="https://www.google.com.ar/" target="__blank"><i class="bi bi-whatsapp"></i></a>
+				<a href="https://github.com/mvazquezmartin" target="__blank"><i class="bi bi-github"></i></a>
+			</div>
+		</div>
+	</footer>
+	<!-- NAVBAR SCRIPT -->
 	<script>
 		var	navLinks = document.getElementById("navLinks");
 		function showMenu(){
@@ -59,5 +114,10 @@
 			navLinks.style.right = "-200px";
 		} 
 	</script>
+	<!-- AOS SCRIPT -->
+	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+	<script>
+ 	 	AOS.init();
+	</script>	
 </body>
 </html>

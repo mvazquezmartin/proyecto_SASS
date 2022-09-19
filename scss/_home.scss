@@ -1,60 +1,138 @@
 @import "config";
 
-/* INDEX */
-.bgImg-header{
+/* HOME vh BACKGROUND */
+.bgImg-home{
 	width: 100%;
-	min-height: 100vh;	
-	padding-bottom: 0px;
+	min-height: 100vh;		
 	background-image: $gradient,url(../assets/background.jpg);
 	background-position: center;
 	background-size: cover;
 	position: relative;
 }
 
-/*.text-main{
-	width: 90%;
-	color: #fff;
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%,-50%);
-	text-align: center;
- 		h1{
-			font-size: 3rem;
-			p{
-				margin: 10px 0 40px;
-				font-size: 14px;
-				color:#fff;
-			}
-		}		
-	}
-}*/
-
-.flex-container-main{
-	@include flex-container(column, center);	
+/*BANNER MAIN*/
+.rowMain{
 	align-items: center;
 	overflow: visible;
 	min-height: 70vh;
 	width: 100%;
+		}
+.row{
+	@include flex-container(column, center);
 		.box-main{
 			overflow: visible;
-			color: #fff;
-			text-align: center;						
-				h1{
-					font-size: 3rem;			
-				}
-				p{
-					font-size: 1rem;
-					margin: 10px 5px 40px;
-				}
-		}	
+				color: #fff;
+						text-align: center;						
+							h1{
+								font-size: 4rem;			
+							}
+							p{
+								font-size: 1rem;
+								margin: 10px 5px 40px;
+							}
+							.boton-main{
+								@include btn;							
+							}					
+		}		
 }
-.boton-main{
-	@include btn;	
-}	
+
+@include mobile{
+	.row{
+		.box-main{
+			h1{
+				font-size: 3rem;
+			}
+		}
+	}
+}
+
 nav{
 	.bi{
 		display: none;		
 	}	
 }
+/* BANNER PRODUCTOS */
+.row{
+	@include flex-container(row, center);	
+		.item-column{			
+			box-sizing: border-box;
+			padding: 20px 12px;			
+			background: rgba(255, 243, 243, 0.8); 
+			flex-basis: 40%;
+			display: flex;
+			justify-content: center; 
+			align-items: center;
+				h2{					
+					margin: 10%;
+					font-size: 3rem;									
+					text-align: start;			
+				}
+				img{					
+					max-width: 70%;
+					border-radius: 50%;					
+				}
+		}		
+}
+/*	MEDIA MOBILE */
+@include mobile {
+	.row{
+		flex-direction: column;
+			.item-column{				
+					h2{
+						text-align: center;
+						font-size: 1.8rem;
+						margin: 5%;
+					}
+			}
+	}
+}
+
+/* BANNER SERVICIOS */
+.bgGradient{
+	background: linear-gradient(90deg, #4b6cb7 0%, #182848 100%);
+}
+.row{
+	.servicios{	
+		@include flex-container(column, center);
+		width: 80%;
+		margin: 1.5rem auto;
+		text-align: center;
+		color: #fff;
+			h1{
+				font-size: 2rem;					
+			}
+	}
+}
+/* SERVICIOS MAIN CARD */
+.row{
+	overflow: visible;
+	.flex-item-card{	
+		@include flex-item-card;				
+		margin: 0 1rem 2rem;
+		transition: all 0.4s 0s ease;				
+			&:hover{
+				box-shadow: 0 0 30px rgba(0,0,0, 0.8);
+				transform: scale(1.1);
+							
+			}
+			h3{
+				margin-bottom: 0.8rem;
+			}
+			img{
+				border-radius: 10px;
+				width: 100%;
+				margin-bottom: 1rem;
+			}
+			p{
+				font-weight: 400;
+				color: #000000;
+			}			
+	}
+	.btn-info{
+		@include btn;
+		margin: 0 3rem 1.5rem;
+		padding: 1rem 6rem;
+	}
+}
+
 

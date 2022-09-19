@@ -1,24 +1,56 @@
-footer{	
+@import "config";
+
+.footer{	
 	@include flex-container(column, center);
-	background: radial-gradient(ellipse at center, rgba(19,25,96,1) 0%,rgba(125,185,232,0) 100%);
-	align-items: center;	
+	background: rgba(255, 243, 243, 0.8);	
 	width: 100%;
 	text-align: center;
 	padding: 30px 0 15px;
-	color: #a8a8a8;
-		h4{
-			margin-bottom: 5px;			
+	overflow: hidden;	
+		.row{
+			/*background: rgba(255, 243, 243, 0.8);*/
+			@include flex-container(row, space-around);
+				.icono-column{
+					box-sizing: border-box;					
+					padding: 20px 12px;
+					flex-basis: 30%;
+					display: flex;
+					flex-direction: column;
+					align-items: center;
+					.bi{
+						font-size: 2rem;
+						font-weight: 600;
+						color: #000000;
+					}					
+				}
+		}					
+		h5{
+			color: #808080;			
 			font-weight: 600;							
 		}
 		p{
-
+			font-size: 0.7rem;
+			color: #808080;
 		}
-		.iconos{					
+		.iconos{
+			margin-top: 0.3rem;					
 			display: flex;
 			justify-content: center;
 				.bi{
 					margin: 0rem 0.5rem;
-					color: #ad6661;
-				}
+					color: #808080;
+					transition: color 0.7s 0s ease;
+						&:hover{
+							color:#ad6661;
+						}
+				}				
 		}
+}
+	
+@include mobile{
+	.footer{
+		.row{
+			flex-direction: column;			
+		}
+	}
 }
