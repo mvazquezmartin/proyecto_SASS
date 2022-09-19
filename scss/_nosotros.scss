@@ -1,0 +1,147 @@
+@import "config";
+
+.img-main{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	max-width: 70vh;
+}
+
+/* GRID GALERIA */
+.grid-img{	
+	display:grid;
+	text-align: center;
+	justify-items: center;
+	align-items: center;
+	margin: 6rem 9rem;
+	overflow: hidden;
+	grid-template-columns: 25% 25% 25% 25%;
+	grid-template-rows: auto auto auto;
+	grid-template-areas:
+	"titulo titulo titulo titulo"
+	"img1 img2 img2 img3"
+	"img4 img2 img2 img5"
+	"img6 img7 img8 img9";
+		.titulo-img{
+			grid-area: titulo;
+			color: #fff;
+		}
+		.img1{
+			grid-area: img1;			
+		}
+		.img2{
+			grid-area: img2;
+				.imgMax{					
+					max-width: 100%;
+					border-radius: 2%;
+				}
+		}
+		.img3{
+			grid-area: img3;
+		}
+		.img4{
+			grid-area: img4;
+		}
+		.img5{
+			grid-area: img5;
+		}
+		.img6{
+			grid-area: img6;
+		}
+		.img7{
+			grid-area: img7;
+		}
+		.img8{
+			grid-area: img8;
+		}
+		.img9{
+			grid-area: img9;
+		}
+		.img-con{
+			max-width: 150px;
+		}		
+}
+/* GRID NOSOTROS */
+.bg-gradiente{
+	background: linear-gradient(to right, #0f0c29, #302b63, #24243e);
+}
+.grid-nosotros{
+	display: grid;
+	gap:1rem;	
+	margin: 0rem 9rem 2rem;
+	justify-items:center;
+	grid-template-columns: 33% 33% 33%;
+	grid-template-rows: auto auto auto;
+	grid-template-areas: 
+	"titulo titulo titulo"
+	"img1 img2 img3"
+	"card1 card2 card3"
+	"pie pie pie";
+	text-align: center;
+	overflow: hidden;	
+		.titulo{
+			grid-area: titulo;			
+			color: #fff;
+			padding: 2rem;					
+		}
+		.card1{
+			grid-area: card1;
+			color: #fff;			
+		}
+		.card2{
+			grid-area: card2;
+			color: #fff;
+		}
+		.card3{
+			grid-area: card3;
+			color: #fff;
+		}
+		.pie{
+			grid-area: pie;			
+			color: #fff;
+			margin-top: 2rem;		
+		}
+		img{			
+			border-radius: 50%;			
+			max-width: 400px;
+		}
+		p{			
+			padding: 1.2rem;
+			font-size: 1rem;			
+		}
+}
+
+@include mobile {
+	.grid-img{
+		margin: 0rem 0rem 1rem;
+		grid-template-columns: 50% 50%;
+		grid-template-areas:
+		"titulo titulo"
+		"img1 img3"
+		"img4 img5"
+		"img2 img2"
+		"img6 img7"
+		"img8 img9";			 
+	}
+	.grid-nosotros{
+		margin: 0rem 0rem 1rem; 
+		grid-template-columns: 100%;
+		grid-template-areas: 
+		"titulo"
+		"img1"
+		"card1"
+		"img2"
+		"card2"
+		"img3"
+		"card3"
+		"pie";
+			.pie{
+				text-align: left;
+				font-size: 0.7rem;
+				margin: 0 0.5rem;
+			}
+			img{
+				max-width: 300px;
+			}
+	}
+}
