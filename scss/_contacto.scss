@@ -1,0 +1,10 @@
+@import "config";
+
+.bg-banner-contacto{
+	@include bg-dot;
+	min-height: 16rem;
+}
+
+.btn-form-enviar{
+	@include btn
+}

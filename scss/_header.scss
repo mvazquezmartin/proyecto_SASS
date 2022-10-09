@@ -2,22 +2,23 @@
 
 /* NAVBAR */
 nav{
-	display: flex;
-	padding: 2% 6%;
+	display: flex;	
+	margin: 0 10rem;
 	justify-content: space-between;
 	align-items: center;
-		img{
-			width: 75px;			
+		img{			
+			width: 50px;			
 		}
 }
 .nav-links{
 	flex: 1;
 	text-align: right;
+	margin: 2rem 0;
 		ul li{
 			list-style: none;
-			display: inline-block;
-			padding: 8px 12px;
+			display: inline-block;			
 			position: relative;
+			margin: 0 1rem;
 				a{
 					color: #fff;
 					text-decoration: none;
@@ -40,8 +41,9 @@ nav{
 	width: 100%
 }
 /*	MEDIA MOBILE */
-@include mobile{
+@include mobile{	
 	.nav-links{
+		margin: 0;
 		position: absolute;
 		background: #f44336;
 		height: 100vh;
@@ -49,20 +51,24 @@ nav{
 		top: 0;
 		right: -200px;
 		text-align: left;
-		z-index: 2;
+		z-index: 3;
 		transition: 1s;		
 			ul{
 				padding: 2rem;
 					li{
 						display: block;
+						margin: 1rem 0 0;
 					}
 			}
 	}
-	nav .bi{
-		display: block;
-		color: #fff;
-		margin: 10px;
-		font-size: 22px;
-		cursor: pointer;
-	}	
+	nav{ 
+		margin: 1rem 2rem;
+		 .bi{
+			display: block;
+			color: #fff;
+			margin: 10px;
+			font-size: 22px;
+			cursor: pointer;
+		} 
+	}
 }

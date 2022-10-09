@@ -1,0 +1,17 @@
+@import "config";
+
+.bg-banner-pro {
+	@include bg-dot;
+	min-height: 16rem;	
+}
+
+.btn-comprar{
+	@include btn;
+	align-self: flex-end;
+	color: #f44336;
+	margin: 1rem auto;
+	transition: color 1s 0s ease, background 1s 0s ease, border 1s 0s ease;
+		&:hover{
+			color:#fff;			
+		}
+}

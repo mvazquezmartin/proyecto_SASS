@@ -4,24 +4,52 @@ $gradient:linear-gradient(rgba(4,9,30,0.6), rgba(4,9,30,0.6));
 $primaryColor:#f44336;
 $mobile: 700px;
 
-a{text-decoration: none;}
-
-/* HOME vh BACKGROUND */
-.bgImg-home{
-	width: 100%;
-	min-height: 100vh;		
-	background-image: $gradient,url(../assets/background.jpg);
-	background-position: center;
-	background-size: cover;
-	position: relative;
-}
-
 /* MEDIA MOBILE */
-@mixin mobile{
+@mixin mobile {
 	@media (max-width: $mobile){
 		@content
 	}
 }
+
+a{text-decoration: none;}
+h1{font-size: 4rem;}
+h2{
+	font-size: 3rem;
+	font-weight: 600;
+}
+.color-white{color:#fff;}
+.of-h{
+	overflow: hidden;
+}
+
+@include mobile {
+	h1{
+		font-size: 2.9rem;
+	}
+	h2{
+		font-size: 1.8rem;
+	}
+}
+
+/* HOME vh BACKGROUND */
+.bg-img-home{
+	width: 100%;
+	min-height: 100vh;
+	background-image: $gradient,url(../assets/background.jpg);
+	background-position: center;
+	background-size: cover;
+	position: relative;
+	overflow: hidden;
+}
+
+/* BG-BANNER-DOT */
+@mixin bg-dot{
+	align-items: center;	
+	background-color: #ffffff;	
+	background-image:  radial-gradient(#f78a45 0.8px, transparent 0.8px), radial-gradient(#f78a45 0.8px, #ffffff 0.8px);
+	background-size: 32px 32px;
+	background-position: 0 0,16px 16px;
+	}
 
 /* BOTON-HOVER */
 @mixin btn{	
@@ -41,12 +69,11 @@ a{text-decoration: none;}
 }
 
 /* FLEXBOX [CONTAINER(ITEM)] */
-@mixin flex-container($direction, $just-cont){
+@mixin my-flex-container ($direction, $just-cont){	
 	display: flex;
 	flex-direction: $direction;
 	flex-wrap: wrap;
 	justify-content: $just-cont;
-
 }
 
 @mixin flex-item{
@@ -54,15 +81,14 @@ a{text-decoration: none;}
 }
 
 /* CARD INICIO */
-
-
 @mixin flex-item-card{
 	flex-basis:30%;
 	background: #CDCDCD;
 	border-radius: 10px;	
 	padding: 15px 10px;
 	box-sizing: border-box;	
-	text-align: center;	
+	text-align: center;
+	background: #C9CCD3;		
 }
 
 /* BORDER FOOTER */

@@ -4,15 +4,15 @@
 .btn-inscribirse{
 	@include btn;
 	color: #f44336;
-	margin: 1rem auto;	
+	margin: 1rem auto;
+	transition: color 1s 0s ease, background 1s 0s ease, border 1s 0s ease;
 		&:hover{
-			color:#fff;
-			transition: 1s;
+			color:#fff;			
 		}
 
 }
 .flex-container{
-	@include flex-container(row, center);	
+	@include my-flex-container(row, center);	
 		.curso-item{		
 			display: flex;
 			max-width: 700px;
@@ -28,7 +28,8 @@
 				img{
 					align-self: center;
 					height: auto;
-					max-width: 100%;						
+					max-width: 100%;
+					color: #fff;						
 				}
 				ul{
 					text-align: left;

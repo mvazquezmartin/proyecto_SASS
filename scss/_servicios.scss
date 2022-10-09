@@ -1,32 +1,52 @@
 @import "config";
 
+.bg-gradient-row{
+	background-image: linear-gradient(-225deg, #FF3CAC 0%, #562B7C 52%, #2B86C5 100%);
+}
+
+.bg-gradient-row-inv{
+	background-image: linear-gradient(225deg, #FF3CAC 0%, #562B7C 52%, #2B86C5 100%);
+}
+.bg-banner-servicio {
+	@include bg-dot;
+	min-height: 16rem;
+}
 /* Servicios */
 .servicios-main{
-	@include flex-container(column, center);
-	width: 80%;
-	margin: auto;
+	@include my-flex-container(column, center);		
 	text-align: center;
-	color: #fff;
+	color: #000;
 	margin-bottom: 0.8rem;
-		h1{
-			font-size: 2rem;
-		}	
 }
+/* Carousel */
+.carousel{
+	max-height: 70vh;
+		.carousel-item{
+			max-height: 70vh;
+			overflow: hidden;
+		}
+}
+
 .flex-row-contenedor{
-	@include flex-container(row, space-between); 
+	@include my-flex-container(row, space-between); 
 		margin: 2% 1%;
 		.flex-item-card{
 			@include flex-item-card;
+			background-image: linear-gradient(-225deg, #A8BFFF 0%, #884D80 100%);
+			margin: 2rem 0;
 		}
 }
-.servicios-col p{
-	color: #777;
+.parrafo-servicio{
+	font-size: 1.3rem;
 }
 
 /* MOBILE */
-@include mobile{
+@include mobile {
 	.flex-row-contenedor{
-		@include flex-container(column, center);
+		@include my-flex-container(column, center);
 		margin: 5%;		
+	}
+	.parrafo-servicio{
+		font-size: 1rem;
 	}
 }

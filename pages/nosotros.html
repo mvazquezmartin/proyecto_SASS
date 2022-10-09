@@ -15,8 +15,8 @@
 	<link rel="stylesheet" href="../css/estilo.css">
 	<title>Nosotros - Aplicando SASS</title>
 </head>
-<body>
-	<header class="bgImg-home">
+<body class="bgBody">
+	<header>
 		<nav>
 			<img src="../assets/logo.png" alt="">
 			<div id="navLinks" class="nav-links">
@@ -24,16 +24,48 @@
 				<ul>
 					<li><a href="../index.html">INICIO</a></li>
 					<li><a href="servicios.html">SERVICIOS</a></li>
-					<li><a href="curso.html">CURSO</a></li>
 					<li><a href="productos.html">PRODUCTOS</a></li>
+					<li><a href="contacto.html">CONTACTO</a></li>
 					<li><a href="nosotros.html">NOSOTROS</a></li>
 				</ul>
 			</div>
 			<i class="bi bi-list" onclick="showMenu()"></i>
 		</nav>
-		<div class="grid-img">
+		
+	</header>
+	<main>
+	<div class="bg-gradiente">
+	<div class="grid-nosotros">
+		<div class="titulo"  data-aos="zoom-out-up" data-aos-anchor-placement="top-bottom">
+			<h1>SOBRE NOSOTROS</h1>
+		</div>
+		<div class="img1"  data-aos="zoom-out-up" data-aos-anchor-placement="top-bottom">
+			<img src="../assets/nosotros01.png" alt="quienes somos">
+		</div>
+		<div class="card1"  data-aos="zoom-out-up" data-aos-anchor-placement="top-bottom">			
+			<h3>QUIENES SOMOS</h3>
+			<p>Somos BojoFlancito, y al igual que vos nos mueve la pasión por los autos! ♥ Nos dedicamos a asesorarte y proveerte dentro del rubro automotriz  de: Accesorios para autos, Herramientas, Productos de Detailing, Repuestos, y más! Para que encuentres todo lo que necesitás en un solo lugar!</p></div>
+		<div class="img2"  data-aos="zoom-out-up" data-aos-anchor-placement="top-bottom">
+			<img src="../assets/nosotros02.png" alt="politica calidad">
+		</div>
+		<div class="card2"  data-aos="zoom-out-up" data-aos-anchor-placement="top-bottom">			
+			<h3>NUESTRA POLITICA DE CALIDAD</h3>
+			<p>Nos diferenciamos por tener garantía en TODOS nuestros productos. Porque únicamente comercializamos productos de marcas y proveedores de excelencia, de Calidad exigente, y 100% confiables. No sacrificamos calidad (ni tampoco pagas de más por eso), por eso confiamos ciegamente en nuestros productos. Y si algo fallara...sabés que tenés una garantía robusta de respaldo, y que tu inversión vale la pena siempre. </p>
+		</div>
+		<div class="img3"  data-aos="zoom-out-up" data-aos-anchor-placement="top-bottom">
+			<img src="../assets/nosotros03.png" alt="politica comercial">
+		</div>
+		<div class="card3"  data-aos="zoom-out-up" data-aos-anchor-placement="top-bottom">			
+			<h3>NUESTRA POLITICA COMERCIAL</h3>
+			<p>Hacemos envíos a todo el país! Buscando siempre las mejores tarifas, y haciendo trackeo hasta que el producto llegue a destino, ya que la transacción de compra no termina hasta que no tengas el producto en tus manos!Además, aceptamos todas las tarjetas de débito y crédito, transferencia y efectivo en nuestras transacciones. </p>
+		</div>
+		<div class="pie"  data-aos="zoom-out-up" data-aos-anchor-placement="top-bottom">
+			<h3>Vas a encontrar la selección los productos y marcas más prestigiosos a nivel internacional dentro del mundo del Detailing (CarPro, Chemical Guys, Mothers, Scanngrip, Rupes, y más!).	Solo comercializamos marcas de vanguardia, certificadas y ensayadas, que garanticen no solo los mejores resultados, sino seguridad plena en quién aplica los productos  y sobre el auto. Luego de años de estar probando una variedad de insumos y equipos, podemos recomendarte todo lo que está disponible en Bullie. Ya sea que seas un fanático, un hobbista, o un profesional, vas a poder encontrar en un solo lugar todos los productos necesarios para dejar a tu auto en el mejor estado!</h3>
+		</div>
+	</div>
+	<div class="grid-img">
 			<div class="titulo-img">
-				<h1>NATUS DETAILS TEAMS</h1>
+				<h2>Natus Details Teams</h2>
 			</div>
 			<div class="img1 img-con" data-aos="zoom-out-right" data-aos-anchor-placement="top-bottom">
 				<img src="../assets/marca01.png" class="img-con" alt="">
@@ -63,42 +95,11 @@
 				<img src="../assets/marca08.png" class="img-con" alt="">
 			</div>
 		</div>
-	</header>
-	<main>
-	<div class="bg-gradiente">
-	<div class="grid-nosotros">
-		<div class="titulo"  data-aos="zoom-out-up" data-aos-anchor-placement="top-bottom">
-			<h1>SOBRE NOSOTROS</h1>
-		</div>
-		<div class="img1"  data-aos="zoom-out-up" data-aos-anchor-placement="top-bottom">
-			<img src="../assets/nosotros01.png" alt="quienes somos">
-		</div>
-		<div class="card1"  data-aos="zoom-out-up" data-aos-anchor-placement="top-bottom">			
-			<h3>QUIENES SOMOS</h3>
-			<p>Somos BojoFlancito, y al igual que vos nos mueve la pasión por los autos! ♥ Nos dedicamos a asesorarte y proveerte dentro del rubro automotriz  de: Accesorios para autos, Herramientas, Productos de Detailing, Repuestos, y más! Para que encuentres todo lo que necesitás en un solo lugar!</p></div>
-		<div class="img2"  data-aos="zoom-out-up" data-aos-anchor-placement="top-bottom">
-			<img src="../assets/nosotros02.png" alt="politica calidad">
-		</div>
-		<div class="card2"  data-aos="zoom-out-up" data-aos-anchor-placement="top-bottom">			
-			<h3>NUESTRA POLITICA DE CALIDAD</h3>
-			<p>Nos diferenciamos por tener garantía en TODOS nuestros productos. Porque únicamente comercializamos productos de marcas y proveedores de excelencia, de Calidad exigente, y 100% confiables. No sacrificamos calidad (ni tampoco pagas de más por eso), por eso confiamos ciegamente en nuestros productos. Y si algo fallara...sabés que tenés una garantía robusta de respaldo, y que tu inversión vale la pena siempre. </p>
-		</div>
-		<div class="img3"  data-aos="zoom-out-up" data-aos-anchor-placement="top-bottom">
-			<img src="../assets/nosotros03.png" alt="politica comercial">
-		</div>
-		<div class="card3"  data-aos="zoom-out-up" data-aos-anchor-placement="top-bottom">			
-			<h3>NUESTRA POLITICA COMERCIAL</h3>
-			<p>Hacemos envíos a todo el país! Buscando siempre las mejores tarifas, y haciendo trackeo hasta que el producto llegue a destino, ya que la transacción de compra no termina hasta que no tengas el producto en tus manos!Además, aceptamos todas las tarjetas de débito y crédito, transferencia y efectivo en nuestras transacciones. </p>
-		</div>
-		<div class="pie"  data-aos="zoom-out-up" data-aos-anchor-placement="top-bottom">
-			<h2>Vas a encontrar la selección los productos y marcas más prestigiosos a nivel internacional dentro del mundo del Detailing (CarPro, Chemical Guys, Mothers, Scanngrip, Rupes, y más!).	Solo comercializamos marcas de vanguardia, certificadas y ensayadas, que garanticen no solo los mejores resultados, sino seguridad plena en quién aplica los productos  y sobre el auto. Luego de años de estar probando una variedad de insumos y equipos, podemos recomendarte todo lo que está disponible en Bullie. Ya sea que seas un fanático, un hobbista, o un profesional, vas a poder encontrar en un solo lugar todos los productos necesarios para dejar a tu auto en el mejor estado!</h2>
-		</div>
-	</div>
 	</div>	
 	</main>
 	<footer>
 		<div class="footer" data-aos="zoom-out-up" data-aos-anchor-placement="top-bottom">
-			<div class="row">
+			<div class="my-row">
 				<div class="icono-column">
 					<i class="bi bi-truck"></i>
 					<h4>ENVÍOS A TODO EL PAÍS</h4>
@@ -115,7 +116,7 @@
 					<h5>PROTEGEMOS TUS DATOS</h5>
 				</div>	
 			</div>		
-			<h5>Sobre Nosotros</h5>
+			<a href="nosotros.html"><h5>Sobre Nosotros</h5></a>
 			<p>Visita nuestras redes sociales</p>
 			<div class="iconos">
 				<a href="https://www.facebook.com/" target="__blank"><i class="bi bi-facebook"></i></a>
